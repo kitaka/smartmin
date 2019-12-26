@@ -6,6 +6,7 @@
 {% if form_field and form_field.is_hidden %}
 {{ form_field }}
 {% else %}
+{% if form_field != None %}
 <div class="control-group {% if form_field.errors %}error{% endif %}">
   <label class="control-label" for="{{ field.name }}">{% get_label field %}</label>
   <div class="controls">{{ form_field }}
